@@ -9,6 +9,7 @@ uglifycss='./node_modules/.bin/uglifycss'
 
 rm -rf ./docs
 mkdir ./docs
+cp ./src/static/favicon.ico ./docs/favicon.ico
 $elm make --optimize --output=$output $input
 $uglify $output --compress "pure_funcs=[F2,F3,F4,F5,F6,F7,F8,F9,A2,A3,A4,A5,A6,A7,A8,A9],pure_getters,keep_fargs=false,unsafe_comps,unsafe" | $uglify --mangle --output=$output
 $htmlmin --case-sensitive --collapse-boolean-attributes --collapse-inline-tag-whitespace --collapse-whitespace --conservative-collapse --decode-entities --quoteCharacter="'" --remove-attribute-quotes --remove-comments --remove-empty-attributes --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --remove-tag-whitespace ./src/static/index.html > ./docs/index.html
