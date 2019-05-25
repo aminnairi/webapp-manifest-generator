@@ -1,0 +1,22 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "reactor": "elm reactor",
+    "format": "elm-format --yes src/",
+    "dev": "elm make --output dist/main.js src/Main.elm && cp -r src/static/* dist",
+    "prod": "./utils/prod.sh"
+  },
+  "devDependencies": {
+    "elm": "^0.19.0-no-deps",
+    "elm-format": "^0.8.1",
+    "html-minifier": "^4.0.0",
+    "uglify-js": "^3.5.15",
+    "uglifycss": "0.0.29"
+  }
+}
