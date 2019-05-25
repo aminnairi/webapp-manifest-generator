@@ -9,7 +9,7 @@
   "scripts": {
     "reactor": "elm reactor",
     "format": "elm-format --yes src/",
-    "dev": "elm make --output dist/main.js src/Main.elm && cp -r src/static/* dist",
+    "dev": "elm make --output docs/main.js src/Main.elm && cp -r src/static/* docs",
     "prod": "./utils/prod.sh"
   },
   "devDependencies": {
